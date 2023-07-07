@@ -1,12 +1,11 @@
-import Image from "next/image"
-import footer from "@/public/footer.svg"
-
 const Footer = () => {
   return (
-    <footer>
-        <Image src={footer} alt="Footer image" />
+    <footer className="mx-4 mt-12">
+      <h2 className="uppercase text-[13vw] tracking-wide leading-none text-right footer relative">
+        Wear <span className="stroke">Everyday</span>
+      </h2>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

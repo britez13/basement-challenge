@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import localFont from 'next/font/local'
+// import localFont from 'next/font/local'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import GlobalStateProvider from '../context/globalState'
 
 // Font files can be colocated inside of `pages`
-const myFont = localFont({ src: '../fonts/basement-grotesqueRegularRegular.woff2' });
+// const myFont = localFont({ src: '../fonts/basement-grotesqueRegularRegular.woff2' });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (<>
@@ -12,8 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>Basement Supply</title>
       <link rel="icon" type="image/x-icon" href="/favicon.svg" />
     </Head>
-    <main className={myFont.className}>
-      <Component {...pageProps} />
+    <main>
+      <GlobalStateProvider>
+        <Component {...pageProps} />
+      </GlobalStateProvider>
     </main>
   </>
   )
