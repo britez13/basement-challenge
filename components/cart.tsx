@@ -46,7 +46,7 @@ function Cart() {
               </ul>
             ) : (
               <h3 className="text-center">
-                Empty cart. It's time to start adding! 😉{" "}
+                Empty cart. It&#39s time to start adding! 😉{" "}
               </h3>
             )}
           </div>

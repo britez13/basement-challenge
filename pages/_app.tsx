@@ -13,11 +13,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>Basement Supply</title>
       <link rel="icon" type="image/x-icon" href="/favicon.svg" />
     </Head>
-    <main>
+    <div>
       <GlobalStateProvider>
         <Component {...pageProps} />
       </GlobalStateProvider>
-    </main>
+    </div>
   </>
   )
 }
