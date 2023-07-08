@@ -22,7 +22,7 @@ const Hero = () => {
           className="hidden absolute -bottom-5 left-10 asterisk lg:block"
           src={floating1}
           width={100}
-          alt="floating shape"
+          alt="asterisk figure"
         ></Image>
       </div>
       <div>
@@ -30,7 +30,7 @@ const Hero = () => {
           className="hidden absolute bottom-10 right-10 asterisk lg:block"
           src={floating2}
           width={100}
-          alt="floating shape"
+          alt="asterisk figure"
         ></Image>
       </div>
     </section>

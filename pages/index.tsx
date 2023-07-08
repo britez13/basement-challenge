@@ -6,8 +6,29 @@ import Hero from "@/components/hero"
 import Products from "@/components/products"
 
 export const getStaticProps: GetStaticProps<{products: Product[]}> = async() => {
-  const response = await fetch("http://localhost:3000/api/products")
-  const products: Product[] = await response.json()
+  const products: Array<Product> = [
+    {
+        id: "1",
+        name: "Black t-shirt",
+        description: "Unisex Basic Softstyle T-Shirt",
+        price: 7.95,
+        img: "/products/shirt.png"
+    }, 
+    {
+        id: "2",
+        name: "Black hoodie",
+        description: "Black Over The Head Hood",
+        price: 13,
+        img: "/products/hoodie.png"
+    }, 
+    {
+        id: "3",
+        name: "Black cap",
+        description: "The basement Logo in a bold, simple form",
+        price: 23,
+        img: "/products/cap.png"
+    }
+  ]
   return {
     props: {
       products
