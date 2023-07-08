@@ -61,7 +61,11 @@ body {
   }
 }
 
-.select-size > label:has(input[type="radio"]) {
+.select-size input[type="radio"]  {
+  appearance: none;
+}
+
+.select-size input[type="radio"] + label {
   text-align: center;
   width: 22px;
   height: 22px;
@@ -69,13 +73,14 @@ body {
   border-radius: 50%;
 }
 
-.select-size > label:has(input[type="radio"]:checked) {
+.select-size input[type="radio"]:checked + label {
   border: 1px solid white;
-} 
-
-.select-size input[type="radio"]  {
-  appearance: none;
 }
+
+/* .select-size label + input[type="radio"]:checked {
+  border: 1px solid white;
+}  */
+
 
 .stroke {
   color: black;
@@ -154,7 +159,6 @@ body {
   }
 }
 
-/**/ 
 
 .asterisk {
   --floating-size: 40px;

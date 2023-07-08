@@ -57,16 +57,20 @@ const CartItem: React.FC<{product: SavedProduct}> = ({ product }) => {
             <span className="flex items-center gap-1 select-size">
               Size:
               {sizes.map((size) => (
-                <label key={size} className="grid place-content-center">
+                <span key={size} >
+                <input
+                type="radio"
+                className="hidden"
+                onChange={handleChange}
+                name={`${product.name}-size`}
+                value={size}
+                id={`${product.name}-${size}`}
+                checked={selectedSize === size}
+              />
+              <label className="grid place-content-center" htmlFor={`${product.name}-${size}`}>
                   {size.toUpperCase()}
-                  <input
-                    type="radio"
-                    onChange={handleChange}
-                    name={`${product.name}-size`}
-                    value={size}
-                    checked={selectedSize === size}
-                  />
-                </label>
+              </label>
+              </span>
               ))}
             </span>
             <span className="block lg:inline-block lg:text-2xl">

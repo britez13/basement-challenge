@@ -39,12 +39,12 @@ export const getStaticProps: GetStaticProps<{products: Product[]}> = async() => 
 
 export default function Home({products}: InferGetStaticPropsType<typeof getStaticProps>) {  
   return (
-    <main className="lg:mx-auto">
+    <div className="lg:mx-auto">
       <Header />
       <Hero />
       <Cart />
       <Products products={products} />
       <Footer />
-    </main>
+    </div>
   )
 }
